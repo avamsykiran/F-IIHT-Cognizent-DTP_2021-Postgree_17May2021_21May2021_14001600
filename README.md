@@ -1,3 +1,15 @@
+https://github.com/avamsykiran/F-IIHT-Cognizent-DTP_2021-Postgree_17May2021_21May2021_14001600.git
+============================================================================================================
+
+PostgreSQL ToC
+-----------------------------------------------------------------------------------------------------------------
+How to create a database from scratch. 
+How to retrieve data from tables using select queries. 
+Filter data using where clauses in SQL.
+Build complex SQL queries to extract important data from databases using table joins.
+Use SQL aggregate functions and group data using group by clauses.
+How to create, alter and delete tables from a database in PostgreSQL. 
+How to insert, update and delete data from tables in PostgreSQL
 
 PostGree SQL
 --------------------------------
@@ -51,9 +63,15 @@ PostGree SQL
 
     Data Definition Language
     -------------------------------------------------------------------------------
-    \l
+    
+    psql -h localhost -U postgres       launch psql as 'postgres' user
+
+
+    \l                  list all databases
+
     CREATE DATABASE dbName
-    \c dbName
+
+    \c dbName           connect to a database
 
     CREATE TABLE tableName (
         col1    datatype    constraint,
@@ -319,6 +337,9 @@ Corelated Sub Query
             FROM emp e JOIN emp m ON e.mgr = m.empno
             GROUP BY m.ename;
 
+Postgree Built-in functions
+=====================================================================================
+   
     string functions:
     ==================
     1) length(string)                          SELECT length('Vamsy Kiran');
