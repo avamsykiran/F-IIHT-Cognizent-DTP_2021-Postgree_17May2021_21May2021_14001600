@@ -1,5 +1,3 @@
-https://github.com/avamsykiran/F-IIHT-Cognizent-DTP_2021-Postgree_17May2021_21May2021_14001600.git
-============================================================================================================
 
 PostgreSQL ToC
 -----------------------------------------------------------------------------------------------------------------
@@ -72,6 +70,13 @@ PostGree SQL
     CREATE DATABASE dbName
 
     \c dbName           connect to a database
+
+
+    Table
+        a group of entities represented through relation/tuple/record/row
+                                                    set/attribute/field/col
+
+    Table = Headspace/Schema/Structure + dataspace
 
     CREATE TABLE tableName (
         col1    datatype    constraint,
@@ -171,8 +176,10 @@ PostGree SQL
             joindate date not null,
             desg varchar(25) not null,
             deptId int not null,
-            CONSTRAINT FK_DEPT_EMPS FOREIGN KEY(deptID) REFERENCES depts(deptId) 
+            CONSTRAINT FK_DEPT_EMPS FOREIGN KEY(deptId) REFERENCES depts(deptId) 
         );
+
+\d tableName            gives teh schema/structure of a table
 
 DROP TABLE tableName;
 
@@ -180,7 +187,6 @@ DROP DATABASE databaseName;
 
 ALTER TABLE tableName ADD colName datatype constraint;
 ALTER TABLE tableName DROP COLUMN colName;
-ALTER TABLE tableName MODIFY colName datatype constraint;
 ALTER TABLE tableName ALTER COLUMN colName TYPE datatype;
 ALTER TABLE tableName ADD CONSTRAINT constraintName .....;
 ALTER TABLE tableName DROP CONSTRAINT constraintName;
